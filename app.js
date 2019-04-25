@@ -148,10 +148,10 @@ function start() {
     const tripService = new TripService();
 
     //Marche
-const promiseParis1$ = tripService.findByName('Paris');
-promiseParis1$
-    .then(trip => console.log(trip))
-    .catch((error) => console.error(`Error : ${error}`));
+    const promiseParis1$ = tripService.findByName('Paris');
+    promiseParis1$
+        .then(trip => console.log(trip))
+        .catch((error) => console.error(`Error : ${error}`));
 
     //Pas marche
     const promiseToulouse$ = tripService.findByName('Toulouse');
